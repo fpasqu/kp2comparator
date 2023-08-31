@@ -1,7 +1,7 @@
 import os
 import glob
 import xml.etree.ElementTree as ET
-
+import math
 
 def prepare_obj():
     return {"Title": None, "UserName": None, "Password": None, "LastModified": None, "CustomKeys": []}
@@ -111,7 +111,44 @@ def compare_lists(list1, list2, filename1, filename2):
         print(f'{filename2}(new)___________{item["Title"]}___________{filename1}')
         print_new_entry(item)
 
+def get_entropy(password):
+    # char sets
+    lowercase = 'abcdefghijklmnopqrstuvwxyz'
+    uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    digits = '0123456789'
+    symbols = '!@#$%^&*()-_=+[]{}|;:,.<>?/\\`~'
+
+    # pool of characters used in the password
+    pool = 0
+    if any(c in lowercase for c in password):
+        pool += len(lowercase)
+    if any(c in uppercase for c in password):
+        pool += len(uppercase)
+    if any(c in digits for c in password):
+        pool += len(digits)
+    if any(c in symbols for c in password):
+        pool += len(symbols)
+    # entropy
+    entropy = math.log2(pool**len(password))
+    return entropy
+
+def entropy_or_compare(first_list, second_list):
+    try:
+        print("1. Calculate entropy (first file).\n2. Compare XMLs.")
+        choice = input("Choice: ")
+        if choice == "1":
+            print("Sorting by entropy...")
+            sorted_data = sorted(first_list[0], key=lambda x: get_entropy(x['Password']))
+            for password in sorted_data:
+                print("----------------------------------------------------")
+                print(f"{password['Title']}: {password['Password']}")
+        elif choice == "2": 
+            compare_lists(first_list[0], second_list[0], first_list[1], second_list[1])
+    except Exception as e:
+        print(f"Error: {e}")
+        input("Press Enter to exit..")
+
 first_list = extract_entries_from_file(1)
-second_list = extract_entries_from_file(2)
-compare_lists(first_list[0], second_list[0], first_list[1], second_list[1])
+second_list = extract_entries_from_file(2)       
+entropy_or_compare(first_list, second_list)
 input("Press Enter to exit...")

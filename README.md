@@ -25,6 +25,7 @@ If you use an offline password manager like KeePass 2 and you often change your 
 ### Prerequisites
 
 All you'll need to run this script is install Python. You can find the download page [here](https://www.python.org/downloads/).
+
 To prepare the databases to compare, export them from KeePass 2 by navigating to this menu:
 
 ![Screen Shot1](images/screenshot_1.png)
@@ -43,7 +44,7 @@ When running the script, you will be presented with 2 choices. The first choice 
 
 ![Screen Shot2](images/screenshot_2.png)
 
-The second choice will let you see changes, indicating which entry has been updated and if there are now ones:
+The second choice will let you see changes, indicating which entry has been updated and if there are new ones:
 
 ![Screen Shot3](images/screenshot_3.png)
 

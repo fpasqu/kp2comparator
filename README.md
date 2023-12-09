@@ -50,7 +50,7 @@ The second choice will let you see changes, indicating which entry has been upda
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/fpasqu/kp2comparator/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/fpasqu/kp2comparator/blob/main/LICENSE) for more information.
 
 ## Authors
 

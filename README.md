@@ -16,7 +16,8 @@
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/fpasqu/kp2comparator/total) ![Issues](https://img.shields.io/github/issues/fpasqu/kp2comparator) ![License](https://img.shields.io/github/license/fpasqu/kp2comparator) 
+![Downloads](https://img.shields.io/github/downloads/fpasqu/kp2comparator/total.svg) ![Issues](https://img.shields.io/github/issues/fpasqu/kp2comparator) 
+![License](https://img.shields.io/github/license/fpasqu/kp2comparator) 
 
 ## About The Project
 

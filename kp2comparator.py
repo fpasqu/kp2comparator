@@ -30,6 +30,10 @@ def extract_entries_from_file(file_n):
         xml_files = glob.glob(os.path.join(folder_path, '*.xml'))
         entry_arr = []
 
+        if not xml_files:
+            print(f"Unable to find XML file in {folder_path}")
+            return (entry_arr, None)
+
         for xml_file in xml_files:
             filename = os.path.basename(xml_file)
             tree = ET.parse(xml_file)

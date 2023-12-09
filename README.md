@@ -41,11 +41,11 @@ python kp2comparator.py
 
 When running the script, you will be presented with 2 choices. The first choice will allow you to sort all passwords by entropy of the first folder, allowing you to see which passwords are more vulnerable:
 
-![Screen Shot2](images/screenshot_3.png)
+![Screen Shot2](images/screenshot_2.png)
 
 The second choice will let you see changes, indicating which entry has been updated and if there are now ones:
 
-![Screen Shot3](images/screenshot_4.png)
+![Screen Shot3](images/screenshot_3.png)
 
 ## License
 

@@ -19,11 +19,20 @@
 ![Downloads](https://img.shields.io/github/downloads/fpasqu/kp2comparator/total.svg) ![Issues](https://img.shields.io/github/issues/fpasqu/kp2comparator) 
 ![License](https://img.shields.io/github/license/fpasqu/kp2comparator) 
 
+## Table Of Contents
+
+- [Table Of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Prerequisites](#prerequisites)
+- [Usage](#usage)
+- [License](#license)
+- [Authors](#authors)
+
 ## About The Project
 
 If you use an offline password manager like KeePass 2 and you often change your passwords on different devices, this script will help you keep track of new entries, list passwords by entropy and notify you if there are differences between the two databases.
 
-### Prerequisites
+## Prerequisites
 
 All you'll need to run this script is install Python. You can find the download page [here](https://www.python.org/downloads/).
 
@@ -33,7 +42,7 @@ To prepare the databases to compare, export them from KeePass 2 by navigating to
 
 Select the option 'Keep Pass XML (2.x)' and save in the respective project folder. Repeat the process for the other database.
 
-### Usage
+## Usage
 
 To run the script, just double click it or run it by command line:
 
